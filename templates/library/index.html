@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Sistem de Gestionare a Bibliotecii</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      .bs-example {
+        margin: 0px;
+      }
+
+      .navbar-brand {
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+
+      .col-lg-6 {
+        margin-top: 5vh;
+        padding-left: 20%;
+      }
+
+      .jumbotron {
+        margin-bottom: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    {% include "library/navbar.html" %}
+
+    <div class="jumbotron">
+      <br />
+      <br />
+      <h1 style="text-align: center" class="display-4">
+        Sistem de Gestionare a Bibliotecii
+      </h1>
+      <br />
+      <br />
+      <p class="lead">
+        Un serviciu dedicat administratorului și elevilor. Oferim resurse
+        online, suport profesional și îndrumare tuturor elevilor noștri oriunde
+        și oricând au ales să studieze.
+      </p>
+      <hr class="my-4" />
+
+      <div class="row">
+        <div class="col-lg-6">
+          <a
+            class="btn btn-danger btn-lg"
+            style="text-align: center; border-radius: 0px"
+            href="/adminclick"
+            role="button"
+            >Panou Administrator</a
+          >
+        </div>
+        <div class="col-lg-6">
+          <a
+            class="btn btn-danger btn-lg"
+            style="border-radius: 0px"
+            href="/studentclick"
+            role="button"
+            >Panou Elev</a
+          >
+        </div>
+      </div>
+    </div>
+
+    {% include "library/footer.html" %}
+  </body>
+</html>

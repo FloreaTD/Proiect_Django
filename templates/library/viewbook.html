@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+  <head>
+    <style media="screen">
+      table.redTable {
+        border: 2px solid #607d8b;
+        background-color: #eee7db;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      table.redTable td,
+      table.redTable th {
+        border: 1px solid #aaaaaa;
+        padding: 3px 2px;
+      }
+      table.redTable tbody td {
+        font-size: 13px;
+      }
+      table.redTable tr:nth-child(even) {
+        background: #ffffff;
+      }
+      table.redTable thead {
+        background: #607d8b;
+      }
+      table.redTable thead th {
+        font-size: 19px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        border-left: 2px solid #607d8b;
+      }
+      table.redTable thead th:first-child {
+        border-left: none;
+      }
+
+      table.redTable tfoot {
+        font-size: 13px;
+        font-weight: bold;
+        color: #ffffff;
+        background: #607d8b;
+      }
+      table.redTable tfoot td {
+        font-size: 13px;
+      }
+      table.redTable tfoot .links {
+        text-align: right;
+      }
+      table.redTable tfoot .links a {
+        display: inline-block;
+        background: #ffffff;
+        color: #607d8b;
+        padding: 2px 8px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    {% if is_admin %}
+    {% include "library/navbaradmin.html" %}
+    {% else %}
+    {% include "library/navbarstudent.html" %}
+    {% endif %}
+    <br />
+    <br />
+    <h3
+      class="p-3 mb-2 bg-success text-white"
+      style="font-size: 30px; text-align: center"
+    >
+      Cărți Disponibile în Bibliotecă
+    </h3>
+    {% if books %}
+    <div class="container">
+      <table
+        class="table table-hover table-condensed table-striped table-bordered"
+      >
+        <thead>
+          <tr>
+            <th>Nume Carte</th>
+            <th>ISBN</th>
+            <th>Autor</th>
+            <th>Categorie</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <div class="links"></div>
+            </td>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for book in books %}
+          <tr>
+            <td>{{ book.nume }}</td>
+            <td>{{ book.isbn }}</td>
+            <td>{{ book.autor }}</td>
+            <td>{{ book.categorie }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <h1>Nicio carte disponibilă momentan</h1>
+    {% endif %}
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    {% include "library/footer.html" %}
+  </body>
+</html>

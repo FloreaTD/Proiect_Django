@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Aprobare</title>
+
+    <style media="screen">
+      .jumbotron {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .jumbotron h1 {
+        text-align: center;
+      }
+
+      .lead {
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .options {
+        text-align: center;
+      }
+
+      .btn-circle {
+        width: 30px;
+        height: 30px;
+        padding: 6px 0px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.42857;
+      }
+
+      .btn-primary {
+        border-radius: 0%;
+      }
+
+      .btn-lg {
+        font-size: 16px;
+      }
+
+      .btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        border-radius: 35px;
+        font-size: 24px;
+        line-height: 1.33;
+      }
+    </style>
+  </head>
+  <body>
+    {% include "library/navbar.html" %}
+    <br />
+    <br />
+    <div class="jumbotron" style="margin-bottom: 0px">
+      <h1 class="display-4">Așteptăm aprobarea, {{user.first_name}}!</h1>
+      <p class="lead">
+        Veți fi notificat odată ce contul dvs. este aprobat de un administrator.
+      </p>
+      <hr class="my-4" />
+      <br>
+      <br>
+      <div class="options">
+        <a
+          href="logout"
+          class="btn btn-primary btn-lg active"
+          role="button"
+          aria-pressed="true"
+          >Homepage</a
+        ><br /><br />
+        
+      </div>
+    </div>
+
+    {% include "library/footer.html" %}
+  </body>
+</html>
