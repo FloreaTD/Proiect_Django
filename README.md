@@ -11,3 +11,6 @@ PASSWORD: admin
 Superuser:\
 USERNAME: SuperAdmin\
 PASSWORD: SuperAdmin
+
+Video:\
+https://www.youtube.com/watch?v=gDRlLP1-q4g
